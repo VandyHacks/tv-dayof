@@ -1,0 +1,15 @@
+header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-content: center;
+}
+
+a {
+  display: flex;
+  align-content: center;
+}
+
+.vh-logo {
+  width: 50%;
+}

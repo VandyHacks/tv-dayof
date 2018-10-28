@@ -1,0 +1,32 @@
+{
+  "name": "react-dayof",
+  "version": "1.0.0",
+  "description": "DayOf page for VandyHacks V, Nov. 2-4",
+  "main": "src/App.tsx",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/react": "^16.4.18",
+    "@types/react-dom": "^16.0.9",
+    "dayjs": "^1.7.7",
+    "immutable": "^3.8.2",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "react-timeago": "^4.1.9"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "css-loader": "^1.0.0",
+    "parcel-bundler": "^1.10.3",
+    "react-svg-loader": "^2.1.0",
+    "sass": "^1.14.3",
+    "style-loader": "^0.23.1",
+    "typescript": "^3.1.3"
+  }
+}

@@ -1,0 +1,35 @@
+@import "./Variables.scss";
+
+.schedule {
+  display: grid;
+  grid:
+    [row1-start] "header header header" 20% [row1-end]
+    [row2-start] "now next future" 1fr [row2-end]
+    / 45% 1fr 1fr;
+  grid-gap: 15px;
+  font-size: 1.3em;
+}
+
+.event {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  align-items: center;
+
+  .time {
+    grid-row: 3;
+    justify-self: flex-end;
+    align-self: flex-end;
+    color: $accent-clr;
+  }
+  .text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    grid-row: 2;
+  }
+  .when {
+    grid-row: 1;
+    color: $accent-clr;
+    font-size: 1.1em;
+  }
+}

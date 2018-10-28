@@ -1,0 +1,162 @@
+.countdown {
+  display: grid;
+  font-weight: 400;
+  grid-template-areas: ". hour min sec" "rem hourTime minTime secTime";
+  grid-column-gap: 1em;
+  align-items: center;
+  justify-content: center;
+  color: #e99456;
+  line-height: 1em;
+  text-align: center;
+  font-size: 1.8em;
+}
+.countdown #hour {
+  grid-area: hour;
+  padding: 0 0.5em;
+}
+.countdown #min {
+  grid-area: min;
+}
+.countdown #sec {
+  grid-area: sec;
+}
+.countdown .remaining {
+  font-size: 1em;
+  text-align: right;
+  grid-area: rem;
+  font-family: SofiaProSemiBold;
+}
+.countdown .labels {
+  font-family: SofiaPro;
+  font-size: 1.15em;
+  grid-row: 1;
+}
+.countdown .time {
+  grid-row: 2;
+  font-size: 1.8em;
+  font-family: SofiaProSemiBold;
+  min-width: 1.8em;
+}header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-content: center;
+}
+
+a {
+  display: flex;
+  align-content: center;
+}
+
+.vh-logo {
+  width: 50%;
+}.announcements {
+  display: grid;
+  grid: [row1-start] "header header" 10% [row1-end] [row2-start] "main side-1" 1fr [row2-end] [row3-start] "main side-2" 1fr [row3-end] [row4-start] "main side-3" 1fr [row4-end]/60% 1fr;
+  grid-gap: 15px;
+}
+
+.main-msg {
+  grid-area: main;
+  font-size: 2em;
+}
+
+.side-msg {
+  font-size: 1.05em;
+}
+
+.card {
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.4);
+  padding: 20px;
+  max-width: 100%;
+  /* width required for text-overflow to work */
+  max-height: 100%;
+}
+
+.msg {
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+.msg .time {
+  grid-row: 2;
+  justify-self: flex-end;
+  align-self: flex-end;
+  color: #e99456;
+}
+.msg .text {
+  grid-row: 1;
+}
+
+.text {
+  font-size: 1.2em;
+  color: #077f91;
+  white-space: pre-wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}.schedule {
+  display: grid;
+  grid: [row1-start] "header header header" 20% [row1-end] [row2-start] "now next future" 1fr [row2-end]/45% 1fr 1fr;
+  grid-gap: 15px;
+  font-size: 1.3em;
+}
+
+.event {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  align-items: center;
+}
+.event .time {
+  grid-row: 3;
+  justify-self: flex-end;
+  align-self: flex-end;
+  color: #e99456;
+}
+.event .text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  grid-row: 2;
+}
+.event .when {
+  grid-row: 1;
+  color: #e99456;
+  font-size: 1.1em;
+}@font-face {
+  font-family: SofiaProSemiBold;
+  src: url("SofiaProSemiBold.0f39d94d.woff");
+}
+@font-face {
+  font-family: SofiaPro;
+  src: url("SofiaProRegular.a622ecb6.woff");
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: SofiaPro;
+  font-size: 20px;
+}
+
+#App {
+  background: url("bg-top.51112840.svg") no-repeat;
+  background-size: cover;
+  background-position: top left;
+  padding: 40px;
+}
+
+.Main {
+  display: grid;
+  grid-template-rows: 1fr 3fr 2fr;
+  grid-gap: 20px;
+  height: calc(100vh - 80px);
+  width: calc(100vw - 80px);
+}
+
+h1 {
+  margin: 0;
+  grid-area: header;
+  color: #e99456;
+  font-size: 2rem;
+}

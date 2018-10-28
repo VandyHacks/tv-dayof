@@ -1,0 +1,40 @@
+@import "./Variables.scss";
+@font-face {
+  font-family: SofiaProSemiBold;
+  src: url("~/assets/fonts/SofiaProSemiBold.woff");
+}
+@font-face {
+  font-family: SofiaPro;
+  src: url("~/assets/fonts/SofiaProRegular.woff");
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: SofiaPro;
+  font-size: 20px;
+}
+
+#App {
+  background: url("../img/bg-top.svg") no-repeat;
+  background-size: cover;
+  background-position: top left;
+  padding: 40px;
+}
+
+.Main {
+  display: grid;
+  grid-template-rows: 1fr 3fr 2fr;
+  grid-gap: 20px;
+  height: calc(100vh - 80px);
+  width: calc(100vw - 80px);
+}
+
+h1 {
+  margin: 0;
+  grid-area: header;
+  color: $accent-clr;
+  font-size: 2rem;
+}
