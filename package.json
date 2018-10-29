@@ -7,8 +7,8 @@
     "start": "parcel index.html",
     "build": "parcel build index.html"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Matt Leon",
+  "license": "MIT",
   "dependencies": {
     "@types/react": "^16.4.18",
     "@types/react-dom": "^16.0.9",
