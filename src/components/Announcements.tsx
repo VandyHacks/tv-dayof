@@ -44,7 +44,7 @@ export class Announcements extends React.Component<{}, AnnouncementState> {
                     });
                 }
             }
-        }
+        };
     }
 
     render() {

@@ -6,10 +6,12 @@ header {
 }
 
 a {
+  flex: 0 0 50%;
   display: flex;
   align-content: center;
 }
 
 .vh-logo {
   width: 50%;
+  flex: 0 0 50%;
 }

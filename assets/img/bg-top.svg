@@ -18,7 +18,7 @@
         website sections light colors
     </title>
     <style type="text/css">
-        #large-red-cloud-r { animation: rl-r-1 45s linear infinite } #large-red-cloud-l { animation: lr-1 41s linear infinite; } #small-teal-cloud-l { animation: rl-r-1 130s linear infinite; } #small-red-cloud-l { animation: rl-r-1 90s linear infinite; } @keyframes rl-r-1 { from { transform: translateX(400px); } to { transform: translateX(-3000px)}} .st10 { fill: rgba(102,185,191, .35); } .st8, .st7 { fill: rgba(231, 0, 115, .2); stroke: rgba(231, 0, 115, .4); stroke-width: 3; } #cloud-1 { animation: lr-1 50s linear infinite; } @keyframes lr-1 { from { transform: translateX(-600px); } to { transform: translateX(3000px); } }
+        #large-red-cloud-r { will-change: transform; animation: rl-r-1 45s linear infinite } #large-red-cloud-l { will-change: transform; animation: lr-1 41s linear infinite; } #small-teal-cloud-l { will-change: transform; animation: rl-r-1 130s linear infinite; } #small-red-cloud-l { will-change: transform; animation: rl-r-1 90s linear infinite; } @keyframes rl-r-1 { from { transform: translateX(400px); } to { transform: translateX(-3000px)}} .st10 { fill: rgba(102,185,191, .35); } .st8, .st7 { fill: rgba(231, 0, 115, .2); stroke: rgba(231, 0, 115, .4); stroke-width: 3; } #cloud-1 { will-change: transform; animation: lr-1 50s linear infinite; } @keyframes lr-1 { from { transform: translateX(-600px); } to { transform: translateX(3000px); } }
     </style>
     <g id="backgrounds" transform="translate(-2316,-2893.7)">
         <rect width="1920" height="1106.8" x="2316" y="3947.9" fill="#f9f1e4" class="st0"/>

@@ -1,8 +1,7 @@
 # static build dir
 dist
 
-
-# Created by https://www.gitignore.io/api/node,linux,windows
+# Created by https://www.gitignore.io/api/node,linux,windows,visualstudiocode
 
 ### Linux ###
 *~
@@ -97,6 +96,13 @@ typings/
 # FuseBox cache
 .fusebox/
 
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
 ### Windows ###
 # Windows thumbnail cache files
 Thumbs.db
@@ -123,4 +129,4 @@ $RECYCLE.BIN/
 *.lnk
 
 
-# End of https://www.gitignore.io/api/node,linux,windows
+# End of https://www.gitignore.io/api/node,linux,windows,visualstudiocode
