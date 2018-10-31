@@ -4,12 +4,16 @@ import VHLogo from '../svg/VHLogo';
 import '../../assets/scss/Header.scss';
 import { url } from 'inspector';
 
-const Header = () => (
+export interface IHeaderProps {
+    countdownDate: Date,
+}
+
+const Header = (props: IHeaderProps) => (
     <header>
         <a className="vh-logo" href="https://dayof.vandyhacks.org">
             <VHLogo />
         </a>
-        <CountdownTimer end={new Date(2018, 10, 4, 12)} />
+        <CountdownTimer end={props.countdownDate} />
     </header>
 )
 

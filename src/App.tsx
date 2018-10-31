@@ -8,7 +8,7 @@ import '../assets/scss/App.scss'
 class App extends React.Component<{}, {}> {
     render() {
         return <div className='Main'>
-            <Header />
+            <Header countdownDate={new Date(2018, 10, 2, 5)} />
             <Announcements />
             <Schedule />
         </div>
