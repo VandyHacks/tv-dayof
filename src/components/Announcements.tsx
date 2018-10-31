@@ -1,11 +1,11 @@
 import * as React from 'react';
 import Timeago from 'react-timeago';
-import * as Immutable from 'immutable';
+import { List, Map } from 'immutable';
 import '../../assets/scss/Announcements.scss';
 
 interface AnnouncementState {
-    displayedMsgs: Immutable.List<any>,
-    allMsgs: Immutable.List<any>,
+    displayedMsgs: List<any>,
+    allMsgs: List<any>,
 }
 
 export class Announcements extends React.Component<{}, AnnouncementState> {
@@ -13,8 +13,8 @@ export class Announcements extends React.Component<{}, AnnouncementState> {
     constructor(props: any) {
         super(props);
         this.state = {
-            displayedMsgs: Immutable.List<Immutable.Map<any, any>>(),
-            allMsgs: Immutable.List<any>(),
+            displayedMsgs: List<Map<any, any>>(),
+            allMsgs: List<any>(),
         };
     }
 
@@ -51,7 +51,7 @@ export class Announcements extends React.Component<{}, AnnouncementState> {
         console.log(this.state.allMsgs);
         return <div className='announcements'>
             <h1>Announcements</h1>
-            {this.state.displayedMsgs.size > 0 ? this.state.displayedMsgs.forEach((m, i) => {
+            {this.state.displayedMsgs.size > 0 ? this.state.displayedMsgs.map((m, i) => {
                 <AnnouncementCard
                     time={m.time}
                     message={m.msg}
@@ -85,6 +85,6 @@ export const AnnouncementCard = (props: AnnouncementCardInterface) => {
             <div className='text'>
                 {props.message}
             </div>
-        </section >
+        </section>
     )
 }
