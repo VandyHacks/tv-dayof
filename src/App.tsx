@@ -16,7 +16,7 @@ class App extends React.Component<{}, { events: List<EventRecord> }> {
 
     render() {
         return <div className='Main'>
-            <Header countdownDate={new Date(2018, 10, 2, 5)} />
+            <Header countdownDate={new Date(2018, 10, 2, 18)} />
             <Announcements />
             <Schedule allEvents={this.state.events} />
         </div>
