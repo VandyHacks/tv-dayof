@@ -54,7 +54,7 @@ export class Announcements extends React.Component<{}, AnnouncementState> {
             } else {
                 const msg = JSON.parse(e.data);
                 this.setState(curState => {
-                    allMsgs: curState.allMsgs.unshift(msg)
+                    return { allMsgs: curState.allMsgs.unshift(msg) }
                 });
 
                 this.updateDisplayedMsgs();
