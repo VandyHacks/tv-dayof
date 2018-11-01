@@ -53,8 +53,15 @@ export class Announcements extends React.Component<{}, AnnouncementState> {
                 window.location.reload();
             } else {
                 const msg = JSON.parse(e.data);
+                console.log(msg);
                 this.setState(curState => {
-                    return { allMsgs: curState.allMsgs.unshift(msg) }
+                    return {
+                        allMsgs: curState.allMsgs.unshift({
+                            time: msg.time,
+                            header: msg.title,
+                            msg: msg.body
+                        })
+                    }
                 });
 
                 this.updateDisplayedMsgs();
