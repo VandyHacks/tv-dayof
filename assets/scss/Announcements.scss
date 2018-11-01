@@ -3,12 +3,14 @@
 .announcements {
   display: grid;
   grid:
-    [row1-start] "header header" 10% [row1-end]
-    [row2-start] "main side-1" 1fr [row2-end]
-    [row3-start] "main side-2" 1fr [row3-end]
-    [row4-start] "main side-3" 1fr [row4-end]
-    / 60% 1fr;
+    [row1-start] "header header" 1fr [row1-end]
+    [row2-start] "main side-1" 2fr [row2-end]
+    [row3-start] "main side-2" 2fr [row3-end]
+    [row4-start] "main side-3" 2fr [row4-end]
+    / 3fr 2fr;
   grid-gap: 15px;
+  overflow: hidden; /* NEW */
+  min-width: 0; /* NEW; needed for Firefox */
 }
 
 .main-msg {
@@ -18,6 +20,10 @@
 
 .side-msg {
   font-size: 1.05em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 10px;
 }
 
 .card {
@@ -37,6 +43,7 @@
     justify-self: flex-end;
     align-self: flex-end;
     color: $accent-clr;
+    z-index: 2;
   }
   .text {
     grid-row: 1;

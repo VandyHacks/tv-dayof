@@ -12,18 +12,20 @@ html,
 body {
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  // overflow: hidden;
   font-family: SofiaPro;
   font-size: 20px;
+  height: 100vh;
+  width: 100vw;
 }
-
-
 
 #App {
   background: url("../img/bg-top.svg") no-repeat;
   background-size: cover;
   background-position: top left;
   padding: 40px;
+  height: calc(100vh - 80px);
+  width: calc(100vw - 80px);
 }
 
 .Main {
@@ -32,6 +34,8 @@ body {
   grid-gap: 20px;
   height: calc(100vh - 80px);
   width: calc(100vw - 80px);
+  min-height: 0; /* NEW */
+  min-width: 0; /* NEW; needed for Firefox */
 }
 
 h1 {
