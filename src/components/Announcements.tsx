@@ -58,8 +58,8 @@ export class Announcements extends React.Component<{}, AnnouncementState> {
                     return {
                         allMsgs: curState.allMsgs.unshift({
                             time: msg.time,
-                            header: msg.title,
-                            msg: msg.body
+                            header: msg.header,
+                            msg: msg.msg
                         })
                     }
                 });
