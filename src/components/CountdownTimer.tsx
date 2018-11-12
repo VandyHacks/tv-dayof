@@ -26,7 +26,7 @@ export class CountdownTimer extends React.Component<CountdownProps, CountdownSta
     // setTimeout call at end will keep running this in a loop every second
     updateTime = () => {
         const now: Date = new Date();
-        const diff = this.props.end !== now ? this.props.end.getTime() - now.getTime() : 0;
+        const diff = this.props.end < now ? this.props.end.getTime() - now.getTime() : 0;
 
         let hours: any = Math.floor(diff / (1000 * (60 ** 2)));
         let minutes: any = Math.floor((diff % (1000 * (60 ** 2))) / (1000 * 60));
